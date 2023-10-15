@@ -1,0 +1,30 @@
+a.text {
+  text-decoration: underline;
+  color: #7b7b7b;  
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.code {
+    font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+    line-height: normal;
+    background: rgba(135,131,120,0.15);
+    color: #EB5757;
+    border-radius: 3px;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+}
