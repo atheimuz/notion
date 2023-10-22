@@ -1,5 +1,6 @@
 import React from "react";
 import Paragraph from "components/block/Paragraph";
+import Quote from "components/block/Quote";
 import Callout from "components/block/Callout";
 
 import style from "./BlockItem.module.scss";
@@ -20,6 +21,8 @@ const BlockItem = ({ data }) => {
                                 items={data.properties?.title}
                             />
                         );
+                    case "quote":
+                        return <Quote data={data} />;
                     case "callout":
                         return <Callout data={data} />;
                     default:
