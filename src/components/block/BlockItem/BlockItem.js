@@ -1,5 +1,6 @@
 import React from "react";
 import Paragraph from "components/block/Paragraph";
+import Callout from "components/block/Callout";
 
 import style from "./BlockItem.module.scss";
 
@@ -19,6 +20,8 @@ const BlockItem = ({ data }) => {
                                 items={data.properties?.title}
                             />
                         );
+                    case "callout":
+                        return <Callout data={data} />;
                     default:
                         return null;
                 }

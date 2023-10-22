@@ -1,0 +1,20 @@
+.callout {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 16px 16px 12px;
+    border-radius: 6px;
+
+    & :global {
+        .paragraph {
+            padding-top: 0;
+        }
+    }
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.textArea {
+    white-space: pre-wrap;
+}
