@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import classnames from "classnames";
+import { returnImgUrl } from "utils/utils";
 import Caption from "components/block/Caption";
 
 import style from "./Image.module.scss";
@@ -69,7 +70,10 @@ const Image = ({ data }) => {
     if (!data?.properties?.source?.[0]?.[0]) return null;
     return (
         <ImageWrapper captionLink={captionLink} data={data}>
-            <img className={style.image} src={data.properties.source[0][0]} />
+            <img
+                className={style.image}
+                src={returnImgUrl(data.properties.source[0][0], data)}
+            />
         </ImageWrapper>
     );
 };
