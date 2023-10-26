@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 4px 0;
+
+    &.center {
+        .inner {
+            align-self: center;
+        }
+    }
+
+    &.right {
+        .inner {
+            align-self: flex-end;
+        }
+    }
+}
+
+.inner {
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    > * {
+        flex-shrink: 0;
+    }
+}
+
+.image {
+    display: block;
+}
