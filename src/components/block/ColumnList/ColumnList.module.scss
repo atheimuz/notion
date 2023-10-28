@@ -1,0 +1,11 @@
+.columnList {
+    display: flex;
+    align-items: flex-start;
+    margin: 12px -8px;
+}
+
+.column {
+    flex: 1;
+    flex-shrink: 0;
+    padding: 0 8px;
+}
