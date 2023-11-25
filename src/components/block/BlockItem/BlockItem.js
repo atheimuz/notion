@@ -4,6 +4,7 @@ import Quote from "components/block/Quote";
 import Callout from "components/block/Callout";
 import Code from "components/block/Code";
 import Divider from "components/block/Divider";
+import Bookmark from "components/block/Bookmark";
 import Image from "components/block/Image";
 
 import style from "./BlockItem.module.scss";
@@ -32,6 +33,8 @@ const BlockItem = ({ data }) => {
                         return <Code data={data} />;
                     case "divider":
                         return <Divider />;
+                    case "bookmark":
+                        return <Bookmark data={data} />;
                     case "image":
                         return <Image data={data} />;
                     default:
