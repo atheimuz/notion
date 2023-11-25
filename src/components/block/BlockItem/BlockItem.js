@@ -1,5 +1,6 @@
 import React from "react";
 import Paragraph from "components/block/Paragraph";
+import ListItem from "components/block/ListItem";
 import Quote from "components/block/Quote";
 import Callout from "components/block/Callout";
 import Code from "components/block/Code";
@@ -31,6 +32,10 @@ const BlockItem = ({ data }) => {
                         return <Callout data={data} />;
                     case "code":
                         return <Code data={data} />;
+                    case "to_do":
+                    case "numbered_list":
+                    case "bulleted_list":
+                        return <ListItem data={data} />;
                     case "divider":
                         return <Divider />;
                     case "bookmark":
