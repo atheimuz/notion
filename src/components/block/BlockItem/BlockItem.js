@@ -5,6 +5,7 @@ import Quote from "components/block/Quote";
 import Callout from "components/block/Callout";
 import Code from "components/block/Code";
 import Divider from "components/block/Divider";
+import Page from "components/block/Page";
 import Bookmark from "components/block/Bookmark";
 import Image from "components/block/Image";
 
@@ -38,6 +39,8 @@ const BlockItem = ({ data }) => {
                         return <ListItem data={data} />;
                     case "divider":
                         return <Divider />;
+                    case "page":
+                        return <Page data={data} />;
                     case "bookmark":
                         return <Bookmark data={data} />;
                     case "image":
