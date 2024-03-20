@@ -1,0 +1,31 @@
+
+.backgroundImg {
+    margin-bottom: -70px;
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-bottom: 33.3333%;
+    }
+}
+
+.textArea {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 25px;
+    // margin-bottom: 24px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    // border-bottom: 1px solid #d1d1d1;
+
+    > *{
+        flex-shrink: 0;
+    }
+}
+
+.icon {
+    font-size: 60px;
+}
