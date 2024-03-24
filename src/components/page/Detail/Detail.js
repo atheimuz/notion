@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import client from "lib/client";
 import PageInfo from "components/block/PageInfo";
+import Database from "components/block/Database";
 import ColumnList from "components/block/ColumnList";
+import Table from "components/block/Table";
 import BlockItem from "components/block/BlockItem";
 
 import style from "./Detail.module.scss";
@@ -35,6 +37,8 @@ const Detail = () => {
             {blockList?.map((itemKey) => {
                 const item = blockObj[itemKey];
                 switch (item.value.type) {
+                    case "collection_view":
+                        return <Database data={item} />;
                     case "column_list":
                         return (
                             <div className={style.block} key={itemKey}>
@@ -54,6 +58,25 @@ const Detail = () => {
                                             return obj;
                                         }
                                     )}
+                                />
+                            </div>
+                        );
+                    case "table":
+                        return (
+                            <div className={style.block} key={itemKey}>
+                                <Table
+                                    data={item.value}
+                                    rows={item.value.content.map((rowKey) => {
+                                        return blockObj[rowKey]?.value;
+                                    })}
+                                    hasHeader={
+                                        item.value.format
+                                            ?.table_block_column_header
+                                    }
+                                    dataKeyArray={
+                                        item.value.format
+                                            ?.table_block_column_order
+                                    }
                                 />
                             </div>
                         );
