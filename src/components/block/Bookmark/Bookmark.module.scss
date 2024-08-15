@@ -1,22 +1,19 @@
 @import "utils/styles/common.scss";
 
 .bookmark {
-    @include card-style;
     display: flex;
-    flex-direction: column;
     overflow: hidden;
-    max-width: 440px;
+    height: 100px;
     margin: 4px 0;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    background-color: white;
     text-decoration: none;
-
-    > * {
-        flex-shrink: 0;
-    }
 }
 
 .cover {
     display: block;
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -32,12 +29,17 @@
     &:before {
         content: "";
         display: block;
-        padding-bottom: 50%;
+        // padding-bottom: 50%;
     }
 }
 
-.textBox {
-    padding: 10px 12px;
+.textBox {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    overflow: hidden;
+    padding: 16px 12px;
 }
 
 .title {

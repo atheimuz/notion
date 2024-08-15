@@ -1,0 +1,14 @@
+@mixin card-style {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px -10px #000; /* 그림자 효과 */
+    background-color: rgba(255, 255, 255, .5); /* 밝게 보이도록 배경색 추가 */
+    border: 1px solid #ebebeb;
+    border-width: 1px 1px 0 0;
+    border-radius: 15px;
+}
+
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
